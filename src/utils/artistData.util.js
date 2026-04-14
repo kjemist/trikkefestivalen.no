@@ -12,7 +12,7 @@ export function comparePerformanceTimes(left, right) {
   return parseTimeToMinutes(left.time) - parseTimeToMinutes(right.time);
 }
 
-export function buildProgramRows(artists) {
+export function mapToProgramRows(artists) {
   return artists
     .flatMap((artist) =>
       artist.performances.map((performance) => ({

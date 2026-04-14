@@ -6,11 +6,11 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import GetArtist from "../components/GetArtist";
 import artistsData from "@/data/artists.json";
-import { buildProgramRows } from "@/utils/artistData";
+import { mapToProgramRows } from "@/utils/artistData.util";
 
 export default function Home() {
   const scaling_factor = 1.1;
-  const program = buildProgramRows(artistsData.artists);
+  const program = mapToProgramRows(artistsData.artists);
 
   return (
     <div className={styles.body}>

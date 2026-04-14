@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
 
 import {
-  buildProgramRows,
   comparePerformanceTimes,
   getProgramDisplayName,
-} from "./artistData";
+  mapToProgramRows,
+} from "./artistData.util";
 
 const mockArtists = [
   {
@@ -57,7 +57,7 @@ describe("artistData utilities", () => {
   });
 
   it("flattens performances into sorted program rows", () => {
-    const rows = buildProgramRows(mockArtists);
+    const rows = mapToProgramRows(mockArtists);
 
     expect(rows.map((row) => row.time)).toEqual([
       "13:00",
@@ -96,11 +96,11 @@ describe("artistData utilities", () => {
   });
 
   it("returns an empty array when no artists are provided", () => {
-    expect(buildProgramRows([])).toEqual([]);
+    expect(mapToProgramRows([])).toEqual([]);
   });
 
   it("ignores artists with no performances", () => {
-    const rows = buildProgramRows([
+    const rows = mapToProgramRows([
       {
         name: "Silent Artist",
         programName: "SILENT ARTIST",
@@ -114,7 +114,7 @@ describe("artistData utilities", () => {
   });
 
   it("keeps multiple performances with the same time", () => {
-    const rows = buildProgramRows([
+    const rows = mapToProgramRows([
       {
         name: "Double Booking",
         performances: [
@@ -153,13 +153,13 @@ describe("artistData utilities", () => {
     ];
     const snapshot = structuredClone(input);
 
-    buildProgramRows(input);
+    mapToProgramRows(input);
 
     expect(input).toEqual(snapshot);
   });
 
   it("builds valid sorted rows from mocked artist data", () => {
-    const rows = buildProgramRows(mockArtists);
+    const rows = mapToProgramRows(mockArtists);
     const performanceCount = mockArtists.reduce(
       (total, artist) => total + artist.performances.length,
       0,
