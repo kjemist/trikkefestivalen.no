@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --max-warnings=0"
+    "lint": "eslint .",
+    "lint:ci": "eslint . --max-warnings=0",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@million/lint": "^1.0.14",
