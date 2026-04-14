@@ -1,7 +1,7 @@
 "use client";
 import Script from "next/script";
 
-export default function BillettoWidget(){
+export default function BillettoWidget() {
   return (
     <>
       <Script src="https://billetto.no/widget.js" strategy="afterInteractive" />

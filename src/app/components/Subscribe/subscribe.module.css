@@ -1,17 +1,17 @@
 .subscribe {
-    position: relative;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    min-height: min-content;
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  min-height: min-content;
 
-    font-family: var(--font-geist-sans);
-    z-index: 1;
+  font-family: var(--font-geist-sans);
+  z-index: 1;
 }
 
 .subscribeElements {
-    margin: 15px;
+  margin: 15px;
 }
 
 .subscribeInput {
@@ -19,15 +19,14 @@
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 20px;
-  width: 300px;           
+  width: 300px;
   color: #ed5c10;
   background-color: white;
   border-color: #ed5c10;
-  
 }
 
 .subscribeInput::placeholder {
-    color: #ed5c10;
+  color: #ed5c10;
 }
 
 .subscribeButton {

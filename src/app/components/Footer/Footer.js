@@ -1,10 +1,9 @@
-import Image from 'next/image'
-import styles from './footer.module.css'
+import Image from "next/image";
+import styles from "./footer.module.css";
 
 export default function Footer() {
   return (
     <div className={styles.page}>
-
       <div className={styles.images}>
         <Image
           className={styles.logo}
@@ -24,21 +23,35 @@ export default function Footer() {
       </div>
 
       <div className={styles.footer}>
-
         <div className={styles.footerleft}>
-          <ul className={styles.footerlink}><a href='https://www.trikkefestivalen.no/artister_og_program'>Artister</a></ul>
-          <ul className={styles.footerlink}><a href='https://www.trikkefestivalen.no/billetter_og_om_festivalen'>Billetter & Om Festivalen</a></ul>
+          <ul className={styles.footerlink}>
+            <a href="https://www.trikkefestivalen.no/artister_og_program">
+              Artister
+            </a>
+          </ul>
+          <ul className={styles.footerlink}>
+            <a href="https://www.trikkefestivalen.no/billetter_og_om_festivalen">
+              Billetter & Om Festivalen
+            </a>
+          </ul>
         </div>
 
         <div className={styles.footercenter}>
-          <ul className={styles.footerlink}><a href='https://www.instagram.com/trikkefestivalen/'>Instagram</a></ul>
-          <ul className={styles.footerlink}><a href='https://www.facebook.com/trikkefestivalen'>Facebook</a></ul>
+          <ul className={styles.footerlink}>
+            <a href="https://www.instagram.com/trikkefestivalen/">Instagram</a>
+          </ul>
+          <ul className={styles.footerlink}>
+            <a href="https://www.facebook.com/trikkefestivalen">Facebook</a>
+          </ul>
         </div>
 
-
         <div className={styles.footerright}>
-          <ul className={styles.footerlink}><a href='https://discord.gg/qw3EeAhK7K'>Discord</a></ul>
-          <ul className={styles.footerlink}><a href='mailto:trikkfestivalen@gmail.com'>Kontakt</a></ul>
+          <ul className={styles.footerlink}>
+            <a href="https://discord.gg/qw3EeAhK7K">Discord</a>
+          </ul>
+          <ul className={styles.footerlink}>
+            <a href="mailto:trikkfestivalen@gmail.com">Kontakt</a>
+          </ul>
         </div>
       </div>
       <div className={styles.logoGrid}>
@@ -49,7 +62,7 @@ export default function Footer() {
           alt="Bergen Kommune Logo"
           width={500}
           height={200}
-          style={{ width: '150px', height: 'auto' }}
+          style={{ width: "150px", height: "auto" }}
         />
         <Image
           loading="lazy"
@@ -58,7 +71,7 @@ export default function Footer() {
           alt="SRIB Logo"
           width={400}
           height={400}
-          style={{ width: '100px', height: 'auto' }}
+          style={{ width: "100px", height: "auto" }}
         />
         <div className={styles.img_invert}>
           <Image
@@ -68,7 +81,7 @@ export default function Footer() {
             alt="BSTV logo"
             width={600}
             height={400}
-            style={{ width: '150px', height: 'auto' }}
+            style={{ width: "150px", height: "auto" }}
           />
         </div>
         <Image
@@ -78,7 +91,7 @@ export default function Footer() {
           alt="Cafe Opera logo"
           width={400}
           height={400}
-          style={{ width: '100px', height: 'auto' }}
+          style={{ width: "100px", height: "auto" }}
         />
         <Image
           loading="lazy"
@@ -87,7 +100,7 @@ export default function Footer() {
           alt="Nobel Bopel logo"
           width={400}
           height={400}
-          style={{ width: '100px', height: 'auto' }}
+          style={{ width: "100px", height: "auto" }}
         />
         <Image
           loading="lazy"
@@ -96,7 +109,7 @@ export default function Footer() {
           alt="Draum Studio logo"
           width={400}
           height={400}
-          style={{ width: '100px', height: 'auto' }}
+          style={{ width: "100px", height: "auto" }}
         />
         <Image
           loading="lazy"
@@ -105,7 +118,7 @@ export default function Footer() {
           alt="D-Production logo"
           width={400}
           height={400}
-          style={{ width: '100px', height: 'auto' }}
+          style={{ width: "100px", height: "auto" }}
         />
         <Image
           loading="lazy"
@@ -114,10 +127,9 @@ export default function Footer() {
           alt="Livesupply logo"
           width={400}
           height={400}
-          style={{ width: '100px', height: 'auto' }}
+          style={{ width: "100px", height: "auto" }}
         />
       </div>
-
     </div>
-  )
+  );
 }
