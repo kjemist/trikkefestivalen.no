@@ -6,10 +6,24 @@ import styles from './artister_og_program.module.css'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import GetArtist from '../components/GetArtist'
+import artistsData from '@/data/artists.json'
+
+function sortByPerformanceTime(left, right) {
+  return left.time.localeCompare(right.time)
+}
 
 export default async function Home() {
 
   const scaling_factor = 1.1;
+  const program = artistsData.artists
+    .flatMap((artist) =>
+      artist.performances.map((performance) => ({
+        name: artist.programName,
+        time: performance.time,
+        venue: performance.venue,
+      }))
+    )
+    .sort(sortByPerformanceTime)
 
 
   return (
@@ -80,51 +94,13 @@ export default async function Home() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>HIN</td>
-                <td>Bergens Tekniske Museum</td>
-                <td>13:00</td>
-              </tr>
-              <tr>
-                <td>SPARKESYKKEL</td>
-                <td>Engen, foran DNS</td>
-                <td>14:00</td>
-              </tr>
-              <tr>
-                <td>EMBLA</td>
-                <td>Bergens Tekniske Museum</td>
-                <td>15:00</td>
-              </tr>
-              <tr>
-                <td>SKANKY</td>
-                <td>Engen, foran DNS</td>
-                <td>16:00</td>
-              </tr>
-              <tr>
-                <td>BEINGAMONKEY</td>
-                <td>Bergens Tekniske Museum</td>
-                <td>17:00</td>
-              </tr>
-              <tr>
-                <td>JULIE GREVE</td>
-                <td>Engen, foran DNS</td>
-                <td>18:00</td>
-              </tr>
-              <tr>
-                <td>RAA DUO</td>
-                <td>Café Opera</td>
-                <td>19:00</td>
-              </tr>
-              <tr>
-                <td>KATHY LONG</td>
-                <td>Café Opera</td>
-                <td>19:30</td>
-              </tr>
-              <tr>
-                <td>HIN</td>
-                <td>Café Opera</td>
-                <td>20:00</td>
-              </tr>
+              {program.map((performance) => (
+                <tr key={`${performance.name}-${performance.time}-${performance.venue}`}>
+                  <td>{performance.name}</td>
+                  <td>{performance.venue}</td>
+                  <td>{performance.time}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

@@ -1,37 +1,32 @@
 import Image from 'next/image';
 import React from 'react';
-import Papa from 'papaparse'; // npm install papaparse
+import artistsData from '@/data/artists.json';
 import styles from './getArtist.module.css';
 
-export default async function GetArtist() {
-  const CSV_URL =
-    'https://docs.google.com/spreadsheets/d/e/2PACX-1vQzKGIN3z1j2Jf5h1bqIvXJyW4Amwt1RBz3tavgaTKXCUTnCLPFqTrZMNo9yw9fe4VhA9Qxg2bm7758/pub?gid=0&single=true&output=csv';
-
-  const res = await fetch(CSV_URL, { next: { revalidate: 1 } });
-  if (!res.ok) throw new Error('Failed to fetch sheet: ' + res.status);
-
-  const textRaw = await res.text();
-
-  // Parse CSV safely
-  const parsed = Papa.parse(textRaw, { header: true, skipEmptyLines: true });
-  const artister_og_program = parsed.data;
+export default function GetArtist() {
+  const artister_og_program = artistsData.artists;
 
   return (
     <div className={styles.artister_og_program}>
-      {artister_og_program.map((artist, i) => (
-        <div key={i} className={styles.artistCard}>
+      {artister_og_program.map((artist) => (
+        <div key={artist.id} className={styles.artistCard}>
           <Image
-            src={`/artistInfo/${artist.Name}.png`}
+            src={`/artistInfo/${artist.image}`}
             alt="artistImage"
             width={400}
             height={450}
           />
           <p>
-            <strong></strong> {artist.Time}
-          <br></br>
-            <strong></strong> {artist.Venue}
+            {artist.performances.map((performance, index) => (
+              <React.Fragment key={`${artist.id}-${performance.time}-${performance.venue}`}>
+                {index > 0 ? <br /> : null}
+                {performance.time}
+                <br />
+                {performance.venue}
+              </React.Fragment>
+            ))}
           </p>
-          <p>{artist.ShortBio}</p>
+          <p>{artist.shortBio}</p>
         </div>
       ))}
     </div>
