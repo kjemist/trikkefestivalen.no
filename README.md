@@ -59,11 +59,21 @@ Artist and program data is stored in `src/data/artists.json`.
 
 Each artist record owns its own `performances` array, which keeps biographies, image mapping, and schedule data together in one place.
 
+Program table transformation logic lives in `src/utils/artistData.js` rather than inside page components.
+
 When updating artist content:
 
 - keep `image` aligned with the matching file in `public/artistInfo`
 - add or edit entries in `performances` instead of updating hardcoded table markup
 - treat the repository JSON as the source of truth rather than Google Sheets
+
+## Testing
+
+Run unit tests locally with `npm run test`.
+
+Run the CI-mode unit test command with `npm run test:ci`.
+
+The current unit tests cover the pure artist/program utility functions in `src/utils/artistData.js`.
 
 ## Deploy on Vercel
 

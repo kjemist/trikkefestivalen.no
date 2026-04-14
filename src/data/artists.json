@@ -1,7 +1,6 @@
 {
   "artists": [
     {
-      "id": "julie-greve",
       "name": "Julie Greve",
       "programName": "JULIE GREVE",
       "image": "Julie_Greve.png",
@@ -14,7 +13,6 @@
       ]
     },
     {
-      "id": "embla",
       "name": "Embla",
       "programName": "EMBLA",
       "image": "Embla.png",
@@ -27,7 +25,6 @@
       ]
     },
     {
-      "id": "skanky",
       "name": "Skanky",
       "programName": "SKANKY",
       "image": "Skanky.png",
@@ -40,7 +37,6 @@
       ]
     },
     {
-      "id": "beingamonkey",
       "name": "BeingAMonkey",
       "programName": "BEINGAMONKEY",
       "image": "Beingamonkey.png",
@@ -53,7 +49,6 @@
       ]
     },
     {
-      "id": "sparkesykkel",
       "name": "Sparkesykkel",
       "programName": "SPARKESYKKEL",
       "image": "Sparkesykkel.png",
@@ -66,7 +61,6 @@
       ]
     },
     {
-      "id": "hin",
       "name": "Hin",
       "programName": "HIN",
       "image": "Hin.png",
@@ -83,7 +77,6 @@
       ]
     },
     {
-      "id": "raa-duo",
       "name": "Raa Duo",
       "programName": "RAA DUO",
       "image": "Raa Duo.png",
@@ -96,7 +89,6 @@
       ]
     },
     {
-      "id": "kathy-long",
       "name": "Kathy Long",
       "programName": "KATHY LONG",
       "image": "Kathy_Long.png",
