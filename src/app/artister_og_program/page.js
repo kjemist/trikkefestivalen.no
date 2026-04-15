@@ -1,16 +1,16 @@
 // page.js for Artist (no: "Artister")
 
+import Image from "next/image";
+import styles from "./artister_og_program.module.css";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import GetArtist from "../components/GetArtist";
+import artistsData from "@/data/artists.json";
+import { mapToProgramRows } from "@/utils/artistData.util";
 
-import Image from 'next/image'
-import styles from './artister_og_program.module.css'
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
-import GetArtist from '../components/GetArtist'
-
-export default async function Home() {
-
+export default function Home() {
   const scaling_factor = 1.1;
-
+  const program = mapToProgramRows(artistsData.artists);
 
   return (
     <div className={styles.body}>
@@ -33,13 +33,12 @@ export default async function Home() {
             height={100}
           />
         </div>
-
-
       </div>
 
       <div className={styles.pageContent}>
-
-        <div className={styles.experience}>Opplev musikk på den historiske trikken gjennom Bergen gater</div>
+        <div className={styles.experience}>
+          Opplev musikk på den historiske trikken gjennom Bergen gater
+        </div>
 
         <div>
           <Image
@@ -52,23 +51,23 @@ export default async function Home() {
         </div>
 
         <div className={styles.orangeBackground}>
+          <div className={styles.artister_og_programText}>ARTISTER</div>
 
-            <div className={styles.artister_og_programText}>ARTISTER</div>
-
-            <Image
-              src="/artister_og_program/artister_og_programNotes.png"
-              alt="artister_og_programNotes"
-              width={180}
-              height={80}
-            />
-      
+          <Image
+            src="/artister_og_program/artister_og_programNotes.png"
+            alt="artister_og_programNotes"
+            width={180}
+            height={80}
+          />
 
           <GetArtist />
-
-      
         </div>
-        <div className={styles.artister_og_programText}style={{ color: '#ed5c10' }}>PROGRAM</div>
-
+        <div
+          className={styles.artister_og_programText}
+          style={{ color: "#ed5c10" }}
+        >
+          PROGRAM
+        </div>
 
         <div className={styles.table}>
           <table>
@@ -80,111 +79,77 @@ export default async function Home() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>HIN</td>
-                <td>Bergens Tekniske Museum</td>
-                <td>13:00</td>
-              </tr>
-              <tr>
-                <td>SPARKESYKKEL</td>
-                <td>Engen, foran DNS</td>
-                <td>14:00</td>
-              </tr>
-              <tr>
-                <td>EMBLA</td>
-                <td>Bergens Tekniske Museum</td>
-                <td>15:00</td>
-              </tr>
-              <tr>
-                <td>SKANKY</td>
-                <td>Engen, foran DNS</td>
-                <td>16:00</td>
-              </tr>
-              <tr>
-                <td>BEINGAMONKEY</td>
-                <td>Bergens Tekniske Museum</td>
-                <td>17:00</td>
-              </tr>
-              <tr>
-                <td>JULIE GREVE</td>
-                <td>Engen, foran DNS</td>
-                <td>18:00</td>
-              </tr>
-              <tr>
-                <td>RAA DUO</td>
-                <td>Café Opera</td>
-                <td>19:00</td>
-              </tr>
-              <tr>
-                <td>KATHY LONG</td>
-                <td>Café Opera</td>
-                <td>19:30</td>
-              </tr>
-              <tr>
-                <td>HIN</td>
-                <td>Café Opera</td>
-                <td>20:00</td>
-              </tr>
+              {program.map((performance) => (
+                <tr key={performance.id}>
+                  <td>{performance.name}</td>
+                  <td>{performance.venue}</td>
+                  <td>{performance.time}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
-
 
         <div className={styles.boxContainer}>
           <Image
             src="/artister_og_program/TrikkefestivalKart.png"
             alt="tram_image"
-            width={500*scaling_factor}
-            height={600*scaling_factor}
+            width={500 * scaling_factor}
+            height={600 * scaling_factor}
           />
         </div>
-      <div className={styles.boxContainer}>
-          <div className={styles.artister_og_programText}style={{ color: '#ed5c10', textAlign: 'center' , fontSize: '30px'}}>
+        <div className={styles.boxContainer}>
+          <div
+            className={styles.artister_og_programText}
+            style={{ color: "#ed5c10", textAlign: "center", fontSize: "30px" }}
+          >
             GRATISKONSERT PÅ CAFÉ OPERA
           </div>
           <div className={styles.box}>
-            Raa Duo, Kathy Long og Hin spiller en ekstra, gratis konsert på Café Opera klokken 19:00. <br /><br />
-            Vi får også et foredrag om den historiske trikken fra Carl Harbitz-Rasmussen, som er styreleder for Bergen Elektriske Sporvei. 
+            Raa Duo, Kathy Long og Hin spiller en ekstra, gratis konsert på Café
+            Opera klokken 19:00. <br />
+            <br />
+            Vi får også et foredrag om den historiske trikken fra Carl
+            Harbitz-Rasmussen, som er styreleder for Bergen Elektriske Sporvei.
           </div>
-          <div className={styles.artister_og_programText}style={{ color: '#ed5c10', textAlign: 'center' , fontSize: '30px'}}>
+          <div
+            className={styles.artister_og_programText}
+            style={{ color: "#ed5c10", textAlign: "center", fontSize: "30px" }}
+          >
             SPILLELISTER
           </div>
           <div className={styles.box}>
-            Vi har laget en spilleliste med artistene som skal spille på Trikkefestivalen som du kan finne under: <br /><br />
-            
+            Vi har laget en spilleliste med artistene som skal spille på
+            Trikkefestivalen som du kan finne under: <br />
+            <br />
             <div className={styles.playlistBox}>
-  <iframe
-    src="https://open.spotify.com/embed/playlist/1aPOyUCTREZZSjgk3JHOX0?utm_source=generator"
-    width="100%"
-    height="352"
-    frameBorder={0}
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    allowFullScreen
-    loading="lazy"
-    title="Spotify playlist"
-  />
-</div>
-
-<div className={styles.playlistBox}>
-  <iframe
-    src="https://embed.tidal.com/playlists/7cfccb76-66a4-4d7f-ad69-cbec751ef5c0"
-    width="100%"
-    height="352"
-    allow="encrypted-media; fullscreen; clipboard-write https://embed.tidal.com; web-share"
-    sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
-    style={{ colorScheme: "light dark" }}
-    title="TIDAL Embed Player"
-  />
-</div>
-
-              </div>
-      </div>
-
+              <iframe
+                src="https://open.spotify.com/embed/playlist/1aPOyUCTREZZSjgk3JHOX0?utm_source=generator"
+                width="100%"
+                height="352"
+                frameBorder={0}
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+                title="Spotify playlist"
+              />
+            </div>
+            <div className={styles.playlistBox}>
+              <iframe
+                src="https://embed.tidal.com/playlists/7cfccb76-66a4-4d7f-ad69-cbec751ef5c0"
+                width="100%"
+                height="352"
+                allow="encrypted-media; fullscreen; clipboard-write https://embed.tidal.com; web-share"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
+                style={{ colorScheme: "light dark" }}
+                title="TIDAL Embed Player"
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       <Footer />
-
     </div>
-  )
+  );
 }
-

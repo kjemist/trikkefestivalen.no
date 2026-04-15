@@ -1,0 +1,104 @@
+{
+  "artists": [
+    {
+      "name": "Julie Greve",
+      "programName": "JULIE GREVE",
+      "image": "Julie_Greve.png",
+      "shortBio": "Julie Greve er en spennende ny stemme på den norske popscenen. Musikken hennes føles som et elektrisk nordlys - rått, glitrende og pulserende. Omgitt av drivende synther og sterke melodilinjer beveger hun seg i et landskap der det skjøre og nære møter det kraftfulle og eksplosive",
+      "performances": [
+        {
+          "time": "18:00",
+          "venue": "Engen, foran DNS"
+        }
+      ]
+    },
+    {
+      "name": "Embla",
+      "programName": "EMBLA",
+      "image": "Embla.png",
+      "shortBio": "Sterke følelser, kraftige basslinjer og en særegen stemme skaper et unikt musikalsk landskap - dette er Embla! Artisten fra Askøy har blitt sammenlignet med storheter som Kate Bush og Aurora.\nMed kraftfulle tekster og en gripende melodi er dette en sang som taler direkte til alle som har kjent på urettferdighet, frykt og frustrasjon. Det musikalske landskapet er en gjennomført miks av organiske og elektroniske elementer, og er en gjenganger i de kommende låtene som vi kan vente oss fra Embla i 2025.",
+      "performances": [
+        {
+          "time": "15:00",
+          "venue": "Bergens Tekniske Museum"
+        }
+      ]
+    },
+    {
+      "name": "Skanky",
+      "programName": "SKANKY",
+      "image": "Skanky.png",
+      "shortBio": "Skanky intellektuelt hatecrimer kunturnorge med sin homoseksuelle forurensa tilstand. I soloprosjektet til produsent, luremus, hoffnarr og performance kunstner Samuel Slay Dalheim, tidligere kjent fra bandet RATTHEW, lager Skanky støyete, elektronisk pønk med utagerende rytmer som er fulle av attitude *.* Stygge, kule og spennende. Musikken er både en fest og en utfordring - for sinte skeive og radikale party girls.",
+      "performances": [
+        {
+          "time": "16:00",
+          "venue": "Engen, foran DNS"
+        }
+      ]
+    },
+    {
+      "name": "BeingAMonkey",
+      "programName": "BEINGAMONKEY",
+      "image": "Beingamonkey.png",
+      "shortBio": "BeingAMonkey er det livlige og uhøytidlige svarte fåret av norsk rap. Med inspirasjon fra pop-punken som regjerte på begynnelsen av tusenårsskiftet og moderne hip-hop, tar musikken hans deg på en reise mellom gravalvor og absurditet. Når han endelige inntar trikken så er for å riste den av sporet sammen med publikum",
+      "performances": [
+        {
+          "time": "17:00",
+          "venue": "Bergens Tekniske Museum"
+        }
+      ]
+    },
+    {
+      "name": "Sparkesykkel",
+      "programName": "SPARKESYKKEL",
+      "image": "Sparkesykkel.png",
+      "shortBio": "Sparkesykkel er en indietrio fra Bergen som kombinerer skandinavisk pop og rock med elementer fra 80-tallet, moderne indie og en god dose sjarm. Musikken befinner seg et sted mellom å danse på rommet og å gråte på klubben - med melodier som setter seg og tekster du kan kjenne deg igjen i.",
+      "performances": [
+        {
+          "time": "14:00",
+          "venue": "Engen, foran DNS"
+        }
+      ]
+    },
+    {
+      "name": "Hin",
+      "programName": "HIN",
+      "image": "Hin.png",
+      "shortBio": "Hin vokste frem mellom de syv fjellene i Bergen. De samlet seg gjennom en kjærlighet for folkemusikk og rock, og et ønske om å skape et lekent, rått, og ikke minst nytt lydlandskap. Med hjerte og røtter dypt i den nordiske kulturskatten og en fot godt plantet i rockeleiren byr bandet Hin på rølpete danseslåtter, deilige ballader og hvem vet.. kanskje en grisevise eller to?",
+      "performances": [
+        {
+          "time": "13:00",
+          "venue": "Bergens Tekniske Museum"
+        },
+        {
+          "time": "20:00",
+          "venue": "Café Opera"
+        }
+      ]
+    },
+    {
+      "name": "Raa Duo",
+      "programName": "RAA DUO",
+      "image": "Raa Duo.png",
+      "shortBio": "Raa er en bergensbasert folkemusikkduo som både løfter taket og skaper øyeblikk for ettertanke. Med uttrykksfull fele og sang, og drivende rytmer fra banjo og gitar, tar Raa Duo lytteren med på en tonereise til en annen tid og et annet sted. Både skotske ballader, irske jigs og reels, og amerikanske skillingsviser forenes i et repertoar som favner bredden i den engelskspråklige tradisjonsmusikken.",
+      "performances": [
+        {
+          "time": "19:00",
+          "venue": "Café Opera"
+        }
+      ]
+    },
+    {
+      "name": "Kathy Long",
+      "programName": "KATHY LONG",
+      "image": "Kathy_Long.png",
+      "shortBio": "Kathy Long is an Irish musician from County Kilkenny. Her music is a deep, lyrical journey through raw and captivating soundscapes. She is currently recording her first album while performing at various venues around Europe and festivals such as Electric Picnic. Her most recent singles 'June' and 'Glow Gold' gained considerable traction from Irish/UK radio as well as being featured in Hot Press, District magazine, RTE and more. She has recently moved to Bergen, Norway, where she will be working with Norwegian producers to finish the final tracks of her debut EP. This EP will be a musical reflection of the elements - fire, air, earth and water, with 'West' being the earth element of the project.",
+      "performances": [
+        {
+          "time": "19:30",
+          "venue": "Café Opera"
+        }
+      ]
+    }
+  ]
+}
